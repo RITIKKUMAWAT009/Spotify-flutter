@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:spotify_lite/common/dummy/dummy.dart';
 import 'package:spotify_lite/common/widgets/button/basic_app_button.dart';
 import 'package:spotify_lite/core/configs/assets/app_images.dart';
 import 'package:spotify_lite/core/configs/themes/app_colors.dart';
@@ -17,13 +18,13 @@ class GetStartedPage extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(vertical: 14, horizontal: 14),
+            padding: EdgeInsets.symmetric(vertical: 40, horizontal: 14),
             decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(AppImages.introBG), fit: BoxFit.fill)),
             child: Column(
               children: [
-                50.heightBox,
+                30.heightBox,
                 Align(
                     alignment: Alignment.topCenter,
                     child: SvgPicture.asset(AppVectors.splash)),
@@ -50,7 +51,8 @@ class GetStartedPage extends StatelessWidget {
                 20.heightBox,
                 BasicAppButton(
                     title: "Get Started",
-                    onPressed: () {
+                    onPressed: (){
+                    // await  uploadToCloud(DummySong.songs);
                       Navigator.push(context, MaterialPageRoute(
                         builder: (context) {
                           return const ChooseModePage();

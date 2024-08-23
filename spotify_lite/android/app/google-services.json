@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "828298419404",
+    "project_id": "spotify-lite-8ddac",
+    "storage_bucket": "spotify-lite-8ddac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828298419404:android:23774bb0ef1a3318adb669",
+        "android_client_info": {
+          "package_name": "com.example.spotify_lite"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu95WCsYNxuEkp2rLnCX0iFX9t1ql-bDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
