@@ -10,4 +10,5 @@ class AppVectors{
   static const String topUnion="${basePath}UnionTop$format";
   static const String apple="${basePath}apple$format";
   static const String google="${basePath}google$format";
+  static const String homeArtistTopCard="${basePath}home_artist_bg$format";
 }

@@ -6,6 +6,7 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:spotify_lite/core/configs/themes/app_theme.dart';
 import 'package:spotify_lite/presentation/choose_mode/bloc/theme_cubit.dart';
+import 'package:spotify_lite/presentation/root/bloc/news_songs_cubit.dart';
 import 'package:spotify_lite/presentation/splash/pages/splash.dart';
 import 'package:spotify_lite/service_locator.dart';
 
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => ThemeCubit()),
+
       ],
       child: BlocBuilder<ThemeCubit, ThemeMode>(
         builder: (context, mode) {

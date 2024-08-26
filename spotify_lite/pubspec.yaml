@@ -46,6 +46,7 @@ dependencies:
   dartz: ^0.10.1
   just_audio: ^0.9.37
   velocity_x: ^4.2.1
+  animated_text_kit: ^4.2.2
 
 dev_dependencies:
   flutter_test:
