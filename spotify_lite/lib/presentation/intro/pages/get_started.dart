@@ -1,5 +1,7 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:spotify_lite/common/dummy/dummy.dart';
 import 'package:spotify_lite/common/widgets/button/basic_app_button.dart';
 import 'package:spotify_lite/core/configs/assets/app_images.dart';
 import 'package:spotify_lite/core/configs/themes/app_colors.dart';
@@ -17,16 +19,37 @@ class GetStartedPage extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(vertical: 14, horizontal: 14),
+            padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 14),
             decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(AppImages.introBG), fit: BoxFit.fill)),
             child: Column(
               children: [
-                50.heightBox,
+                30.heightBox,
                 Align(
                     alignment: Alignment.topCenter,
                     child: SvgPicture.asset(AppVectors.splash)),
+                50.heightBox,
+                SizedBox(
+                  width: 250.0,
+                  child: DefaultTextStyle(
+                    style:  const TextStyle(
+                      fontSize: 20.0,fontWeight: FontWeight.bold,
+                      fontFamily: 'Agne',
+                    ),
+                    child: AnimatedTextKit(
+                      isRepeatingAnimation: true,
+                     repeatForever: true,
+                      animatedTexts: [
+                        TypewriterAnimatedText('Design and Developed by',textAlign: TextAlign.center,speed: const Duration(milliseconds:100)),
+                        TypewriterAnimatedText(' Ritik kumawat',textAlign: TextAlign.center,speed: const Duration(milliseconds:100),textStyle: TextStyle(color: AppColors.primary),),
+                      ],
+                      onTap: () {
+                        print("Tap Event");
+                      },
+                    ),
+                  ),
+                ),
                 const Spacer(),
                 const Text(
                   "Enjoy Listening To Music",
@@ -50,7 +73,8 @@ class GetStartedPage extends StatelessWidget {
                 20.heightBox,
                 BasicAppButton(
                     title: "Get Started",
-                    onPressed: () {
+                    onPressed: ()async{
+                     // await  uploadToCloud(DummySong.songs);
                       Navigator.push(context, MaterialPageRoute(
                         builder: (context) {
                           return const ChooseModePage();
